@@ -15,6 +15,7 @@ const image     = require('./controllers/image');
 app.use(bodyParser.json());
 app.use(cors());
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED =0
 
 const db = knex({
   client: 'pg',
