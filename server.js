@@ -19,10 +19,8 @@ app.use(cors());
 const db = knex({
   client: 'pg',
   connection: {
-  	host: 'postgresql-aerodynamic-17120',
-  	user: 'postgres',
-  	password: '',
-  	database: 'smart-brain'
+  	host: process.env.DATABASE_URL,
+  	ssl: true
   }
 });
 
